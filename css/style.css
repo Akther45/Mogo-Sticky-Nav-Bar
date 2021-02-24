@@ -1,0 +1,1046 @@
+/*
+  1.Common css
+  2.space css
+  3.heading css
+  4.menu css
+  5.banner css
+  6.story css
+  7.funfact css
+  8.services css
+  9.design css
+  10.we do
+  11.quotation1
+  12.team
+  13.images
+  14.work
+  15.quotation2
+  16.client
+  17.blog
+  18.map
+  19.footer
+  20.copyright
+*/
+:root{
+    --primarycolor1:#f38181;
+    --primarycolor2:#fce38a;
+    --headingfont: 'Montserrat', sans-serif;
+    --subheadingfont:'Kaushan Script', cursive;
+    --paragraphfont:'Roboto', sans-serif;
+    --whitecolor: #ffffff;
+    --blackcolor: #333333;
+    --paragraphcolor: #999999;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clr{
+    clear: both;
+}
+.full-wrapper{
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.text-white{
+    color: #ffffff;
+}
+
+/* Common CSS */
+.m-30{
+    margin: 0 30px;
+}
+.mr-30{
+    margin-right: 30px;
+}
+.img{
+    vertical-align: middle;
+}
+/* space CSS */
+
+
+.heading{
+    text-align: center;
+}
+.heading h4{
+    font-family: var(--subheadingfont);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+.heading h3{
+    font-family: var(--headingfont);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    position: relative;
+}
+.heading h3::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycolor1);
+    position: absolute;
+    left: 50%;
+    bottom: -36px;
+    transform: translateX(-50%);
+}
+.heading p{
+    width: 977px;
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 400;
+    color: var( --paragraphcolor);
+    line-height: 24px;
+    margin-left: 110px;
+}
+.overlay{
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all linear 0.4s;
+    text-align: center;
+    color: var(--whitecolor);
+    
+}
+/* heading css ends */
+.menubg{
+   position: absolute;
+   top: 28px;
+   left: 0;
+   z-index: 11121;
+   transition: all linear 0.4s; 
+}
+.fixed-nav{
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 11121;
+   background: rgba(75, 68, 71, 0.8);
+   animation: smothly 1s linear; 
+}
+@keyframes smothly{
+    0%{
+        top: -50px;
+    }
+    100%{
+        top: 0;
+    }
+}
+.menu .logo{
+    float: left;
+    width: 100px;
+}
+.menu .menu-list{
+    float: left;
+    width: 1100px;
+}
+.menu .menu-list ul{
+    float: right;
+}
+.menu .menu-list ul li{
+    float: left;
+}
+.menu .menu-list ul li a{
+    font-family: var(--headingcolor);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+    margin: 0 29px;
+    position: relative;
+    transition: all linear 0.4s;
+}
+.menu .menu-list ul li:hover a{
+    color: var(--primarycolor2);
+}
+.menu .menu-list ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--primarycolor2);
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: all linear 0.4s;
+    
+}
+.menu .menu-list ul li:hover a::after{
+    width: 100%;
+}
+.menu .menu-list ul li .active{
+    color: var(--primarycolor2);
+}
+.menu .menu-list ul li .active::after{
+    width: 100%;
+}
+.menu .menu-list ul li a:last-child{
+    padding-right: 0;
+}
+/* menu css ends */
+
+/* banner css start */
+.bannerbg{
+    padding-top: 236px;
+    padding-bottom: 230px;
+    background: url(../images/banner.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+.bannerbg::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;   
+}
+.banner{
+    text-align: center;
+    color: var(--whitecolor);
+}
+.banner h4{
+    font-family: var(--subheadingfont);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.banner h1{
+    font-family: var(--headingfont);
+    font-size: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 100px;
+    padding: 35px 0 137px;
+}
+.banner h1::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--whitecolor);
+    position: absolute;
+    left: 50%;
+    bottom: 320px;
+    transform: translateX(-50%);
+    
+}
+.banner a{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--whitecolor);
+    display: inline-block;
+    border: 3px solid #ffffff;
+    line-height: 34px;
+    padding: 0 30px;
+}
+.banner ul li{
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    float: left;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.banner ul{
+    position: absolute;
+    left: 50%;
+    bottom: 92px;
+    transform: translateX(-50%);
+}
+.banner ul .active{
+    background: #ff2828;
+}
+/* banner css ends */
+/* story css start */
+.storybg{
+    padding: 90px 0 110px;
+}
+.story .story-content{
+    padding-top: 100px;
+}
+.story .story-content .story-item{
+    width: 380px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.story .story-content .story-item:hover .overlay{
+    top: 0;
+}
+.story .story-content .story-item .overlay i{
+    margin-top: 90px;
+    font-size: 50px;
+}
+.story .story-content .story-item .overlay p{
+    font-family: var(--headingfont);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.story .story-content .story-item img{
+    width: 100%;
+}
+
+/* story css ends */
+/* funfact css start */
+.funfactbg{
+    background: #95e1d3;
+}
+.funfact .fun-item{
+    width: 216px;
+    float: left;
+    text-align: center;
+    padding: 85px 0;
+}
+.funfact .fun-item h4{
+    font-family: var(--headingfont);
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--whitecolor);
+}
+.funfact .fun-item p{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+}
+/* funfact css ends */
+/* services css start */
+.servicebg{
+    padding: 110px 0 120px;
+}
+.service .service-content{
+    margin-top: 70px;
+    margin-bottom: 22px;
+    position: relative;
+}
+.service .service-content .service-item{
+    width: 380px;
+    float: left;
+    padding-bottom:75px;
+    position: relative;
+    padding-top: 30px;
+}
+.service .service-content::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    position: absolute;
+    left: 0;
+    top: 138px;
+}
+.service .service-content .service-item img{
+    height: 30px;
+    padding-left: 20px;
+}
+.service .service-content .service-item .text{
+    width: 310px;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+}
+.service .service-content .service-item .text h4{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.service .service-content .service-item .text p{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--paragraphcolor);
+    text-transform: capitalize;
+    padding-bottom: 50px;
+}
+/* services css ends */
+/* design css start */
+.designbg{
+    background:url(../images/design-banner.jpg) no-repeat center / cover;
+    padding-top: 80px;
+    padding-bottom: 670px;
+}
+.design .design-item{
+    position: relative;
+}
+.design .design-item .big-mbl{
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.design .design-item .small-mbl{
+    position: absolute;
+    top:292px;
+    left: 75%;
+    transform: translateX(-75%);
+}
+/* design css ends */
+/* we do css start */
+.wedobg{
+    padding: 110px 0 120px;
+}
+.wedo .wedo-content{
+    padding-top: 95px;
+}
+.wedo .wedo-content .wedo-img{
+    width: 580px;
+    float: left;   
+}
+.wedo .wedo-content .wedo-img img{
+    width: 100%;
+}
+.wedo .wedo-content .wedo-collapse{
+    width: 590px;
+    float: left;
+}
+.wedo .wedo-content .wedo-collapse .item {
+    margin-bottom: 10px;
+}
+.wedo .wedo-content .wedo-collapse .header{
+    border: 1px solid var(--paragraphcolor);
+    box-sizing: border-box;
+    padding: 16px;
+}
+.wedo .wedo-content .wedo-collapse .item .header h6{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    line-height: 35px;
+    display: inline;
+}
+.wedo .wedo-content .wedo-collapse .item .header i{
+    float: right;
+}
+.wedo .wedo-content .wedo-collapse .item .paragraph{
+    border: 1px solid var(--paragraphcolor);
+    box-sizing: border-box;
+    padding: 7px;
+    border-top: none;
+}
+.wedo .wedo-content .wedo-collapse .item .paragraph p{
+    font-family: var(--paragraphfont);
+    font-weight: 300;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--paragraphcolor);
+    line-height: 24px;
+}
+.wedo .wedo-content .wedo-collapse .header img{
+    float: left;
+    margin-bottom: 3px;
+    margin-right: 15px;
+}
+/* we do css ends */
+/* quotation css start */
+.quotationbg{
+    padding: 70px 0;
+    background: #f8f8f8;
+}
+.quotation .q-box{
+    width: 270px;
+    float: left;
+}
+.quotation .q-box .box{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #95e1d3;
+    margin-left: 105px;
+    position: relative;
+}
+.quotation .q-box .box img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.quotation .q-box .box i{
+    position: absolute;
+    top:50%;
+    left: -90px;
+    transform:translateY(-50%);
+}
+.quotation .q-text{
+    width: 900px;
+    float: left;
+    position: relative;
+}
+.quotation .q-text p{
+    font-family: var(--paragraphfont);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    color: var(--paragraphcolor);
+    font-style: italic;
+    width: 760px;
+    padding-top: 10px;
+}
+.quotation .q-text span{
+    font-family: var(--subheadingfont);
+    font-size: 24px;
+    font-weight: 400px;
+    color: var(--blackcolor);
+    padding-left: 70px;
+    position: relative;    
+}
+.quotation .q-text span::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycolor1);
+    position: absolute;
+    top: 17px;
+    left: 0;    
+}
+.quotation .q-text i{
+    position: absolute;
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);
+}
+/* quotation css ends */
+/* team css start */
+.teambg{
+    margin-top: 70px;
+}
+.team .team-content{
+    padding-top: 95px;
+}
+.team .team-content .team-item{
+    width: 380px;
+    float: left;
+    text-align: center;
+}
+.team .team-content .team-item .image{
+    position: relative;
+    overflow: hidden;
+    transition: all linear 0.6s;
+}
+.team .team-content .team-item .image:hover .overlay{
+    top: 0;
+}
+.team .team-content .team-item .image .overlay ul{
+    margin-top: 230px;
+    margin-left: 90px;
+}
+.team .team-content .team-item .image .overlay ul li{
+    float: left;
+}
+.team .team-content .team-item .image .overlay ul li .active{
+    background: var(--primarycolor1);
+    color: var(--whitecolor);
+}
+.team .team-content .team-item .image .overlay ul li a{
+    width: 80px;
+    height: 60px;
+    background:var(--primarycolor2);
+    font-size: 24px;
+    color: var(--primarycolor1);
+    padding: 15px;
+    transition: all linear 0.6s;
+}
+.team .team-content .team-item .image .overlay ul li:hover a{
+    background: var(--primarycolor1);
+    color: var(--whitecolor);
+}
+.team .team-content .team-item .text h6{
+    font-family: var(--headingfont);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+.team .team-content .team-item .text p{
+    font-family: var(--paragraphfont);
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--paragraphcolor);
+    text-transform: capitalize;
+    font-style: italic;
+}
+/* team css ends */
+/* images css start */
+.imagesbg{
+    padding: 60px 0;
+    background: #f8f8f8;
+    margin-top: 80px;
+}
+/* images css ends */
+/* work css start */
+.workbg{
+    margin-top: 80px;
+}
+.workbg .gallery-item{
+    width: 25%;
+    float: left;
+    margin-top: 80px;
+}
+.workbg .gallery-item .g-image{
+    overflow: hidden;
+    position: relative;
+}
+.workbg .gallery-item .g-image:hover .overlay{
+    top: 0;
+}
+.workbg .gallery-item .g-image  .overlay i{
+    margin-top: 100px;
+}
+.workbg .gallery-item .g-image  .overlay h3{
+    font-family: var(--headingfont);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+    margin-top: 10px;
+    
+}
+.workbg .gallery-item .g-image .overlay p{
+    font-family: var(--paragraphfont);
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--paragraphcolor);
+    text-transform: capitalize;
+    font-style: italic;
+     margin-top: 10px;
+}
+.workbg .gallery-item .g-image img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* work css ends */
+/* quotation2 css start */
+.quotation2bg{
+    padding: 70px 0;
+}
+.quotation2 .q-box{
+    width: 280px;
+    float: left;
+}
+.quotation2 .q-box .box{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-left: 95px;
+    position: relative;
+}
+.quotation2 .q-box .box img{
+    width: 180px;
+    height: 180px;
+}
+.quotation2 .q-box .box i{
+    position: absolute;
+    top:50%;
+    left: -90px;
+    transform:translateY(-50%);
+}
+.quotation2 .q-text{
+    width: 890px;
+    float: left;
+    position: relative;
+}
+.quotation2 .q-text p{
+    font-family: var(--paragraphfont);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    color: var(--paragraphcolor);
+    font-style: italic;
+    width: 740px;
+    padding-top: 10px;
+}
+.quotation2 .q-text span{
+    font-family: var(--subheadingfont);
+    font-size: 24px;
+    font-weight: 400px;
+    color: var(--blackcolor);
+    padding-left: 70px;
+    position: relative; 
+    text-transform: capitalize;
+}
+.quotation2 .q-text span::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycolor1);
+    position: absolute;
+    top: 17px;
+    left: 0;    
+}
+.quotation2 .q-text i{
+    position: absolute;
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);
+}
+/* quotation2 css ends */
+/* client css start */
+.clientbg{
+    background: url(../images/clientbanner.png) no-repeat center / cover;
+    padding-top: 110px;
+    padding-bottom: 120px;
+}
+.client .client-item{
+    width: 585px;
+    float: left;
+    margin-top: 50px;
+}
+.client .client-item .image{
+    float: left;
+    padding-left: 30px;
+}
+.client .client-item .text{
+    width: 405px;
+    float: left;
+    margin-left: 20px;
+    position: relative;
+}
+.client .client-item .text::after{
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primarycolor1);
+    position: absolute;
+    top: 55px;
+    left: 0; 
+}
+.client .client-item .text h4{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: capitalize;
+}
+.client .client-item .text h6{
+    font-family: var(--paragraphfont);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--blackcolor);
+    text-transform: capitalize;
+    font-style: italic;
+    margin: 7px 0 30px;
+}
+.client .client-item .text p{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--paragraphcolor);
+    line-height: 24px;
+}
+/* client css ends */
+/* blog css start */
+.blogbg{
+    padding-top: 110px;
+    padding-bottom: 115px;
+}
+.blog .blog-item{
+    width: 380px;
+    float: left;
+}
+.blog .blog-item .b-img{
+    width: 100%;
+    position: relative;
+}
+.blog .blog-item .b-img .date{
+    width: 60px;
+    height: 70px;
+    background: #95e1d3;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    left: -15px;
+}
+.blog .blog-item .b-img .date h4{
+    font-family: var(--headingfont);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--whitecolor);
+    margin-top: 9px;
+}
+.blog .blog-item .b-img .date h6{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--whitecolor);
+    font-style: italic;
+}
+.blog .blog-item h3{
+    font-family: var(--headingfont);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    margin-top: 9px;
+    text-transform: uppercase;
+}
+.blog .blog-item p{
+    font-family: var(--paragraphfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--paragraphcolor);
+    margin-top: 12px;
+    padding-bottom: 40px;
+    line-height: 24px;
+    position: relative;
+}
+.blog .blog-item p::after{
+    content: '';
+    width: 380px;
+    height: 1px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 70px;
+    left: 0;
+}
+.blog .blog-item spane{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--paragraphcolor);
+    font-style: italic;
+    margin-right: 20px;
+    padding: 20px 0;
+}
+.blog .blog-item spane i{
+    color: #95e1d3;
+}
+/* blog css ends */
+/* map css start */
+.mapbg{
+    background: url(../images/map.png) no-repeat center / cover;
+    padding: 20px;
+}
+.map .heading h4{
+    color: var(--primarycolor1);
+    margin-top: 10px;
+}
+.map .heading h4 i{
+    margin-top: 30px;
+}
+.map .heading h3{
+    color: var(--primarycolor1);
+    font-size: 24px;
+}
+/* map css ends */
+/* footer css start */
+.footerbg{
+    padding: 70px 0;
+}
+.footer .f-item1{
+    width: 480px;
+    float: left;
+}
+.footer .f-item1 .first{
+    border-bottom: 1px solid #f8f8f8;
+    padding-bottom: 10px;
+}
+.footer .f-item1 .first img{
+    margin-bottom: 40px;
+}
+.footer .f-item1 .first p{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--paragraphcolor);
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+.footer .f-item1 .first span{
+    font-family: var(--headingfont);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--blackcolor);
+}
+.footer .f-item1 .second p{
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--paragraphcolor);
+    font-style: italic;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.footer .f-item1 .second{
+    position: relative;
+}
+.footer .f-item1 .second ul{
+    position: absolute;
+    top: 0;
+    left: 90px;
+}
+.footer .f-item1 .second ul li{
+    float: left;
+    margin-right: 15px;  
+}
+.footer .f-item1 .second ul li a{
+    color:  #75cebe;
+}
+.footer .f-item1 .second form input{
+    width: 230px;
+    height: 40px;
+    border: 2px solid #efefef;
+    font-family: var(--paragraphfont);
+    font-size: 15px;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    color: var(--paragraphcolor);
+}
+.footer .f-item1 .second button{
+    width: 150px;
+    height: 44px;
+    background:  #75cebe;
+    border-color:  #75c9ac;
+    position: absolute;
+    top: 38px;
+    left: 234px;
+}
+.footer .f-item1 .second button a{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--whitecolor);
+    text-transform: uppercase;
+}
+.footer .f-item2{
+    width: 370px;
+    float: left;
+}
+.footer .f-item2 .b-heading h3{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+.footer .f-item2 .b-item .img1{
+    position: relative;
+    padding-bottom: 22px;
+}
+.footer .f-item2 .b-item .img1 h3{
+    font-family: var(--headingfont);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+    position: absolute;
+    top: 12px;
+    left: 140px;
+    line-height: 18px;
+    width: 230px;
+}
+.footer .f-item2 .b-item .img1 p{
+    font-family: var(--paragraphfont);
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--blackcolor);
+    text-transform: capitalize;
+    font-style: italic;
+    position: absolute;
+    top: 52px;
+    left: 140px;
+    width: 230px;
+}
+.footer .f-item3{
+    width: 290px;
+    float: left;
+    padding-left: 20px;
+}
+.footer .f-item3 h3{
+    margin-bottom: 35px;
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    text-transform: uppercase;
+}
+.footer .f-item3 ul li{
+    float: left;
+    margin: 1px 4px;
+}
+.footer .f-item3 ul li img{
+    width: 88px;
+}
+.footer .f-item3 p{
+    font-family: var(--paragraphfont);
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--blackcolor);
+    text-transform: capitalize;
+    font-style: italic;
+    padding-left: 4px;
+}
+/* footer css ends */
+/* copy css start */
+.copybg{
+    padding: 20px 0;
+    background: #f8f8f8;
+}
+.copy{
+    text-align: center;
+}
+.copy p{
+    font-family: var(--headingfont);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--blackcolor);
+    position: relative;
+}
+.copy p a{
+    color: var(--primarycolor1);
+}
+.copy p::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #e5e5e5;
+    position: absolute;
+    top:-23px;
+    left: 0;
+}
+/* copy css ends */
+.back_to_top{
+    width: 40px;
+    height: 40px;
+    background: #0d917d;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    z-index: 9999;
+}
+.back_to_top i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+}
